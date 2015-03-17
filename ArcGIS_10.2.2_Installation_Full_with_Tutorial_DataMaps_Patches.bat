@@ -1,7 +1,7 @@
 rem 		This batch file automates the process of installing ESRI's ArcGIS Desktop 10.2.2
-rem 		The file was created by Stacey D. Maples, GIS Specialist at the Yale University Map Collection
-rem			Question & Comments should be directed to stacey.maples@yale.edu / 203-432-8269
-rem         edited on 05/29/2014 for Yale Faculty, Student & Staff Installations
+rem 		The file was created by Stacey D. Maples, Geospatial Manager at the Stanford Geospatial Center, Stanford University
+rem			Question & Comments should be directed to stacemaples@stanford.edu
+rem         edited on 03/16/2015 for Stanford Faculty, Student & Staff Non-Managed Workstation and Personal Installations
 
 
 set __COMPAT_LAYER=RunAsInvoker
