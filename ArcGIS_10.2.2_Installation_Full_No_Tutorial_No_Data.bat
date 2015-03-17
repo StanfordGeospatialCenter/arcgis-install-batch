@@ -44,12 +44,51 @@ echo Installing the Data Interoperability Extension (you should read up on this,
 rem Install Data Interoperability Extension for ArcGIS 10.2.2
 C:\WINDOWS\system32\msiexec.exe /I "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\DataInteropDesktop\SetupFiles\setup.msi" /norestart /passive /qb
 
+
+
+rem patches below
+echo Installing ArcGIS 10.2 - 10.2.2 for Desktop Print Dialog Hang Patch...
+rem Install ArcGIS 10.2 - 10.2.2 for Desktop Print Dialog Hang Patch
+C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\ArcGIS-1022-DT-PDH-Patch" /norestart /passive /qb
+
+echo Installing ArcGIS 10.2.2 for (Desktop/Engine/Server) Oracle Geodatabase Object Schema Update and Editing Patch...
+rem Install ArcGIS 10.2.2 for (Desktop/Engine/Server) Oracle Geodatabase Object Schema Update and Editing Patch
+C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\ArcGIS-1022-DT-OGOSUE-Patch" /norestart /passive /qb
+
+echo Installing ...
+rem Install 
+C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\" /norestart /passive /qb
+
+echo Installing ...
+rem Install 
+C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\" /norestart /passive /qb
+
+echo Installing ...
+rem Install 
+C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\" /norestart /passive /qb
+
+echo Installing ...
+rem Install 
+C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\" /norestart /passive /qb
+
+echo Installing ...
+rem Install 
+C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\" /norestart /passive /qb
+
+echo Installing ...
+rem Install 
+C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\" /norestart /passive /qb
+
 REM Determine if on 64-bit operating system
 IF not EXIST "C:\Program Files (x86)" GOTO 64BITEND
 
 echo Installing the 64-bit Background Geoprocessing Extension...
 rem 64-bit Background Geoprocessing Extension
 C:\WINDOWS\system32\msiexec.exe /I "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\DesktopBackgroundGP\SetupFiles\setup.msi" /norestart /passive /qb
+
+echo Installing ArcGIS 10.2.2 for (Desktop/Engine/Server) Oracle Geodatabase Object Schema Update and Editing Patch...
+rem Install ArcGIS 10.2.2 for (Desktop/Engine/Server) Oracle Geodatabase Object Schema Update and Editing Patch
+C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\ArcGIS-1022-BGDT-OGOSUE-Patch" /norestart /passive /qb
 
 :64BITEND
 
