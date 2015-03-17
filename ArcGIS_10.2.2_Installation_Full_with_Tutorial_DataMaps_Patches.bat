@@ -46,38 +46,80 @@ C:\WINDOWS\system32\msiexec.exe /I "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Des
 
 
 
-rem patches below
+rem installing patches below
 echo Installing ArcGIS 10.2 - 10.2.2 for Desktop Print Dialog Hang Patch...
 rem Install ArcGIS 10.2 - 10.2.2 for Desktop Print Dialog Hang Patch
-C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\ArcGIS-1022-DT-PDH-Patch" /norestart /passive /qb
+C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\ArcGIS-1022-DT-PDH-Patch.msp" /norestart /passive /qb
 
 echo Installing ArcGIS 10.2.2 for (Desktop/Engine/Server) Oracle Geodatabase Object Schema Update and Editing Patch...
 rem Install ArcGIS 10.2.2 for (Desktop/Engine/Server) Oracle Geodatabase Object Schema Update and Editing Patch
-C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\ArcGIS-1022-DT-OGOSUE-Patch" /norestart /passive /qb
+C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\ArcGIS-1022-DT-OGOSUE-Patch.msp" /norestart /passive /qb
 
-echo Installing ...
-rem Install 
-C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\" /norestart /passive /qb
+echo Installing ArcGIS 10.2.2 for Desktop Non-textured Multipatch Transparency Patch...
+rem Install ArcGIS 10.2.2 for Desktop Non-textured Multipatch Transparency Patch
+C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\ArcGIS-1022-DT-NMT-Patch.msp" /norestart /passive /qb
 
-echo Installing ...
-rem Install 
-C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\" /norestart /passive /qb
+echo Installing ArcGIS 10.2.2 for (Desktop, Engine, Server) Update GeoPackage Support for the OGC Standard Version 1...
+rem Install ArcGIS 10.2.2 for (Desktop, Engine, Server) Update GeoPackage Support for the OGC Standard Version 1
+C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\ArcGIS-1022-DT-UGSO-Patch.msp" /norestart /passive /qb
 
-echo Installing ...
-rem Install 
-C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\" /norestart /passive /qb
+echo Installing ArcGIS 10.2.2 for (Desktop, Engine, Server) Spatial Reference Consistency Patch...
+rem Install ArcGIS 10.2.2 for (Desktop, Engine, Server) Spatial Reference Consistency Patch
+C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\ArcGIS-1022-DT-SRC-Patch.msp" /norestart /passive /qb
 
-echo Installing ...
-rem Install 
-C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\" /norestart /passive /qb
+echo Installing ArcGIS 10.1 SP1 - 10.2.2 for (Desktop, Engine, Server) OpenSSL Update Patch...
+rem Install ArcGIS 10.1 SP1 - 10.2.2 for (Desktop, Engine, Server) OpenSSL Update Patch
+C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\ArcGIS-1022-DT-OSSLU-Patch.msp" /norestart /passive /qb
 
-echo Installing ...
-rem Install 
-C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\" /norestart /passive /qb
+echo Installing ArcGIS 10.1 SP1 QIP – 10.2.2 (Desktop, Engine, Server) Tracking Layers Numeric NULL Values Patch...
+rem Install ArcGIS 10.1 SP1 QIP – 10.2.2 (Desktop, Engine, Server) Tracking Layers Numeric NULL Values Patch
+C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\ArcGIS-1022-DT-TLNNV-Patch.msp" /norestart /passive /qb
 
-echo Installing ...
-rem Install 
-C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\" /norestart /passive /qb
+
+echo Installing ArcGIS 10.2 – 10.2.2 for Desktop Digital Globe GeoEye Metadata/Product Layout Patch...
+rem Install ArcGIS 10.2 – 10.2.2 for Desktop Digital Globe GeoEye Metadata/Product Layout Patch
+C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\ArcGIS-1022-DT-DGGM-Patch.msp" /norestart /passive /qb
+
+
+echo Installing ArcGIS 10.2.2 for (Desktop, Engine, Server) Set Shapefile Default Code Page Patch...
+rem Install ArcGIS 10.2.2 for (Desktop, Engine, Server) Set Shapefile Default Code Page Patch
+C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\ArcGIS-1022-DT-SSDCP-Patch.msp" /norestart /passive /qb
+
+echo Installing ArcGIS 10 SP5 – 10.2.2 for (Desktop, Engine, Server) PDF Web Mercator Auxiliary Sphere Patch...
+rem Install ArcGIS 10 SP5 – 10.2.2 for (Desktop, Engine, Server) PDF Web Mercator Auxiliary Sphere Patch
+C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\ArcGIS-1022-DT-PWMAS-Patch.msp" /norestart /passive /qb
+
+
+echo Installing ArcGIS 10.2.1 & 10.2.2 for Desktop Hydrology Tools Ready-to-use-Services Patch...
+rem Install ArcGIS 10.2.1 & 10.2.2 for Desktop Hydrology Tools Ready-to-use-Services Patch
+C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\ArcGIS-1022-DT-HTRS-Patch.msp" /norestart /passive /qb
+
+
+echo Installing ArcGIS 10.2.2 for (Desktop, Engine, Server) Geodatabase and Feature Service Sync Optimization Patch...
+rem Install ArcGIS 10.2.2 for (Desktop, Engine, Server) Geodatabase and Feature Service Sync Optimization Patch
+C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\ArcGIS-1022-DT-GFSSO-Patch.msp" /norestart /passive /qb
+
+
+echo Installing ArcGIS 10.2.2 for Desktop Parcel Fabric General Maintenance Patch...
+rem Install ArcGIS 10.2.2 for Desktop Parcel Fabric General Maintenance Patch
+C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\ArcGIS-1022-DT-PFGM-PatchB.msp" /norestart /passive /qb
+
+
+echo Installing ArcGIS 10.2.2 (Desktop, Engine, Server) Geographic or Datum Transformation Patch...
+rem Install ArcGIS 10.2.2 (Desktop, Engine, Server) Geographic or Datum Transformation Patch
+C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\ArcGIS-1022-DT-GDT-Patch.msp" /norestart /passive /qb
+
+
+echo Installing ArcGIS 'Oracle Critical Patch Update - October 2014' Connection Issue Patch...
+rem Install ArcGIS 'Oracle Critical Patch Update - October 2014' Connection Issue Patch
+C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\ArcGIS-1022-DT-OCPU-Patch.msp" /norestart /passive /qb
+
+
+echo Installing ArcGIS 10.2.2 for Desktop WMTS Service Layer Display Patch...
+rem Install ArcGIS 10.2.2 for Desktop WMTS Service Layer Display Patch
+C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\ArcGIS-1022-DT-WSLD-Patch.msp" /norestart /passive /qb
+
+
 
 REM Determine if on 64-bit operating system
 IF not EXIST "C:\Program Files (x86)" GOTO 64BITEND
@@ -86,9 +128,44 @@ echo Installing the 64-bit Background Geoprocessing Extension...
 rem 64-bit Background Geoprocessing Extension
 C:\WINDOWS\system32\msiexec.exe /I "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\DesktopBackgroundGP\SetupFiles\setup.msi" /norestart /passive /qb
 
+
+rem Installing 64-bit patches below
 echo Installing ArcGIS 10.2.2 for (Desktop/Engine/Server) Oracle Geodatabase Object Schema Update and Editing Patch...
 rem Install ArcGIS 10.2.2 for (Desktop/Engine/Server) Oracle Geodatabase Object Schema Update and Editing Patch
-C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\ArcGIS-1022-BGDT-OGOSUE-Patch" /norestart /passive /qb
+C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\ArcGIS-1022-BGDT-OGOSUE-Patch.msp" /norestart /passive /qb
+
+echo Installing ArcGIS 10.2.2 for (Desktop, Engine, Server) Spatial Reference Consistency Patch...
+rem Install ArcGIS 10.2.2 for (Desktop, Engine, Server) Spatial Reference Consistency Patch
+C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\ArcGIS-1022-BGDT-SRC-Patch.msp" /norestart /passive /qb
+
+echo Installing ArcGIS 10.1 SP1 - 10.2.2 for (Desktop, Engine, Server) OpenSSL Update Patch...
+rem Install ArcGIS 10.1 SP1 - 10.2.2 for (Desktop, Engine, Server) OpenSSL Update Patch
+C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\ArcGIS-1022-BGDT-OSSLU-Patch.msp" /norestart /passive /qb
+
+echo Installing ArcGIS 10.1 SP1 QIP – 10.2.2 (Desktop, Engine, Server) Tracking Layers Numeric NULL Values Patch...
+rem Install ArcGIS 10.1 SP1 QIP – 10.2.2 (Desktop, Engine, Server) Tracking Layers Numeric NULL Values Patch
+C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\ArcGIS-1022-BGDT-TLNNV-Patch.msp" /norestart /passive /qb
+
+echo Installing ArcGIS 10.2.2 for (Desktop, Engine, Server) Set Shapefile Default Code Page Patch...
+rem Install ArcGIS 10.2.2 for (Desktop, Engine, Server) Set Shapefile Default Code Page Patch
+C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\ArcGIS-1022-BGDT-SSDCP-Patch.msp" /norestart /passive /qb
+
+echo Installing ArcGIS 10 SP5 – 10.2.2 for (Desktop, Engine, Server) PDF Web Mercator Auxiliary Sphere Patch...
+rem Install ArcGIS 10 SP5 – 10.2.2 for (Desktop, Engine, Server) PDF Web Mercator Auxiliary Sphere Patch
+C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\ArcGIS-1022-BGDT-PWMAS-Patch.msp" /norestart /passive /qb
+
+echo Installing ArcGIS 10.2.2 for (Desktop, Engine, Server) Geodatabase and Feature Service Sync Optimization Patch...
+rem Install ArcGIS 10.2.2 for (Desktop, Engine, Server) Geodatabase and Feature Service Sync Optimization Patch
+C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\ArcGIS-1022-BGDT-GFSSO-Patch.msp" /norestart /passive /qb
+
+echo Installing ArcGIS 10.2.2 (Desktop, Engine, Server) Geographic or Datum Transformation Patch...
+rem Install ArcGIS 10.2.2 (Desktop, Engine, Server) Geographic or Datum Transformation Patch
+C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\ArcGIS-1022-BGDT-GDT-Patch.msp" /norestart /passive /qb
+
+echo Installing ArcGIS 'Oracle Critical Patch Update - October 2014' Connection Issue Patch...
+rem Install ArcGIS 'Oracle Critical Patch Update - October 2014' Connection Issue Patch
+C:\WINDOWS\system32\msiexec.exe /P "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.2.2\Patches\ArcGIS-1022-BGDT-OCPU-Patch.msp" /norestart /passive /qb
+
 
 :64BITEND
 
