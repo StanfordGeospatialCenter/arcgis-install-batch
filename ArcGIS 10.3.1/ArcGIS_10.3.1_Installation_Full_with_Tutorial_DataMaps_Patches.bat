@@ -1,7 +1,7 @@
 rem 		This batch file automates the process of installing ESRI's ArcGIS Desktop 10.3.1
 rem 		The file was created by Stacey D. Maples, Geospatial Manager at the Stanford Geospatial Center, Stanford University
 rem			Question & Comments should be directed to stacemaples@stanford.edu
-rem         edited on 05/29/2015 for Stanford Faculty, Student & Staff Non-Managed Workstation and Personal Installations
+rem     edited on 05/29/2015 for Stanford Faculty, Student & Staff Non-Managed Workstation and Personal Installations
 
 
 set __COMPAT_LAYER=RunAsInvoker
