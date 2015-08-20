@@ -48,12 +48,6 @@ echo Installing the Data Interoperability Extension (you should read up on this,
 REM Install Data Interoperability Extension for ArcGIS 10.3.1
 C:\WINDOWS\system32\msiexec.exe /I "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.3.1\DataInteropDesktop\SetupFiles\setup.msi" /norestart /passive /qb
 
-echo Installing the 32-bit ArcHydro Extension...
-REM Installing the 32-bit ArcHydro Extension...
-C:\WINDOWS\system32\msiexec.exe /I "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.3.1\ArcHydro\ArcHydroTools.msi" /norestart /passive /qb
-
-
-
 REM Determine if on 64-bit operating system
 IF not EXIST "C:\Program Files (x86)" GOTO 64BITEND
 
@@ -87,6 +81,15 @@ echo Installing ArcGIS for 10.3.1 for Desktop Georeferencing CAD data Patch
 C:\WINDOWS\system32\msiexec.exe /p "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.3.1\Patches\ArcGIS-1031-DT-GCD-Patch.msp" /norestart /passive /gb
 
 REM install data & maps, ArcTutor and default settings registry entries
+
+echo Installing ArcGIS 10.3 Tutorial Materials that go with the tutorials in the Help System...
+rem Install ArcGIS 10.3 Tutorial Materials
+
+xcopy "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.3.1\ArcTutor" "C:\ArcTutor" /s /e /i
+
+echo Installing the Esri Data & Maps Dataset... this is about 3GB of data, so it might take a while...
+rem Copy ESRI Data & Maps to the C: Drive of the target machine
+xcopy "\\INSERT_YOUR_SERVER_ADDRESS_HERE\Data_and_Maps_for_ArcGIS_10.3.1" "C:\DATAMAPS103" /s /e /i 
 
 REM Install Registry Entries for enabling all extensions and setting Relative Paths as the default
 REGEDIT.exe -S "\\INSERT_YOUR_SERVER_ADDRESS_HERE\ArcGIS_Desktop_10.3.1\ArcGIS_10.3.1_RegistryEntries.reg" /norestart
