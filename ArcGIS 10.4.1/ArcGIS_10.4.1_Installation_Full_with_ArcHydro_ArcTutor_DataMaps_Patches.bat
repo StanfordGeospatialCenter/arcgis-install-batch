@@ -71,6 +71,10 @@ echo Installing Patches
 REM Determine if on 64-bit operating system
 IF not EXIST "C:\Program Files (x86)" GOTO 64BITPatchesEnd
 
+echo Installing the 32-bit ArcHydro Extension...
+REM Installing the 32-bit ArcHydro Extension...
+C:\WINDOWS\system32\msiexec.exe /I "\\sul-gislab\geowares\Esri\ArcGIS_Desktop_10.4.1\ArcHydro\ArcHydroTools.msi" /norestart /passive /qb
+
 REM ArcGIS 10.4.1 for (Desktop, Engine, Server) Geocoding General Maintenance Patch 
 echo Installing ArcGIS 10.4.1 for (Desktop, Engine, Server) Geocoding General Maintenance Patch 64-bit
 C:\WINDOWS\system32\msiexec.exe /p "\\sul-gislab\geowares\Esri\ArcGIS_Desktop_10.4.1\Patches\ArcGIS-1041-BGDT-GGM-Patch.msp" /norestart /passive /gb
@@ -87,8 +91,8 @@ C:\WINDOWS\system32\msiexec.exe /p "\\sul-gislab\geowares\Esri\ArcGIS_Desktop_10
 
 REM install data & maps, ArcTutor and default settings registry entries
 
-echo Installing ArcGIS 10.3 Tutorial Materials that go with the tutorials in the Help System...
-rem Install ArcGIS 10.3 Tutorial Materials
+echo Installing ArcGIS 10.4 Tutorial Materials that go with the tutorials in the Help System...
+rem Install ArcGIS 10.4 Tutorial Materials
 
 xcopy "\\sul-gislab\geowares\Esri\ArcGIS_Desktop_10.4.1\ArcTutor" "C:\ArcTutor" /s /e /i
 
