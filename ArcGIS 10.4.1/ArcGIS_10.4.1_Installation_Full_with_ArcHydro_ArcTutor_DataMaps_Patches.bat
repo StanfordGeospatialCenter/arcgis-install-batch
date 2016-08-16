@@ -94,10 +94,10 @@ xcopy "\\sul-gislab\geowares\Esri\ArcGIS_Desktop_10.4.1\ArcTutor" "C:\ArcTutor" 
 
 echo Installing the Esri Data & Maps Dataset... this is about 3GB of data, so it might take a while...
 rem Copy ESRI Data & Maps to the C: Drive of the target machine
-xcopy "\\sul-gislab\geowares\Esri\Data_and_Maps_for_ArcGIS_10.4.1" "C:\DATAMAPS103" /s /e /i 
+xcopy "\\sul-gislab\geowares\Esri\Data_and_Maps_for_ArcGIS_2015" "C:\DATAMAPS2015" /s /e /i 
 
 REM Install Registry Entries for enabling all extensions and setting Relative Paths as the default
-REM REGEDIT.exe -S "\\sul-gislab\geowares\Esri\ArcGIS_Desktop_10.4.1\ArcGIS_10.4.1_RegistryEntries.reg" /norestart
+REGEDIT.exe -S "\\sul-gislab\geowares\Esri\ArcGIS_Desktop_10.4.1\ArcGIS_10.4.1_RegistryEntries.reg" /norestart
 
 
 
