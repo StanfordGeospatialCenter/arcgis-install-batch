@@ -92,13 +92,13 @@ C:\WINDOWS\system32\msiexec.exe /p "\\sul-gislab\geowares\Esri\ArcGIS_Desktop_10
 REM install data & maps, ArcTutor and default settings registry entries
 
 echo Installing ArcGIS 10.4 Tutorial Materials that go with the tutorials in the Help System...
-rem Install ArcGIS 10.4 Tutorial Materials
 
+rem Install ArcGIS 10.4 Tutorial Materials
 xcopy "\\sul-gislab\geowares\Esri\ArcGIS_Desktop_10.4.1\ArcTutor" "C:\ArcTutor" /s /e /i
 
-echo Installing the Esri Data & Maps Dataset... this is about 3GB of data, so it might take a while...
-rem Copy ESRI Data & Maps to the C: Drive of the target machine
-xcopy "\\sul-gislab\geowares\Esri\Data_and_Maps_for_ArcGIS_2015" "C:\DATAMAPS2015" /s /e /i 
+echo Installing the Esri Data & Maps Dataset... this is about 4GB of data, so it might take a while...
+rem Copy ESRI Data & Maps to the C:\EsriDataMaps104 Drive of the target machine
+xcopy "\\sul-gislab\geowares\Esri\Data_and_Maps_for_ArcGIS_10.4.1" "C:\EsriDataMaps104" /s /e /i 
 
 REM Install Registry Entries for enabling all extensions and setting Relative Paths as the default
 REGEDIT.exe -S "\\sul-gislab\geowares\Esri\ArcGIS_Desktop_10.4.1\ArcGIS_10.4.1_RegistryEntries.reg" /norestart
