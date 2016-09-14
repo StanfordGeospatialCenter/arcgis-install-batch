@@ -36,7 +36,7 @@ REM Installation of ArcGIS Software
 
 echo Installing ArcGIS Desktop 10.4.1... this could take a while... you should go have dinner, or something...
 REM Install ArcGIS Desktop 10.4.1  with options
-C:\WINDOWS\system32\msiexec.exe /I "\\sul-gislab\geowares\Esri\ArcGIS_Desktop_10.4.1\Desktop\SetupFiles\setup.msi" ADDLOCAL=ALL ESRI_LICENSE_HOST=27004@sul-gislm.stanford.edu INSTALLDIR1=C:\Python27 SOFTWARE_CLASS=Professional SEAT_PREFERENCE=Float /norestart /passive /qb
+C:\WINDOWS\system32\msiexec.exe /I "\\sul-gislab\geowares\Esri\ArcGIS_Desktop_10.4.1\Desktop\SetupFiles\setup.msi" ESRI_LICENSE_HOST=27004@sul-gislm.stanford.edu INSTALLDIR1=C:\Python27 SOFTWARE_CLASS=Professional SEAT_PREFERENCE=Float /norestart /passive /qb
 
 echo Installing VBA support for ArcGIS 10.4.1
 REM Install VBA Support for ArcGIS 10.4.1
@@ -61,13 +61,15 @@ echo Installing the 64-bit ArcHydro Extension...
 REM Installing the 64-bit ArcHydro Extension...
 C:\WINDOWS\system32\msiexec.exe /I "\\sul-gislab\geowares\Esri\ArcGIS_Desktop_10.4.1\ArcHydro\ArcHydroTools_x64.msi" /norestart /passive /qb
 
+
 :64BITEND
+
 
 REM Patch Installation
 echo Installing Patches
 
 REM Determine if on 64-bit operating system
-IF not EXIST "C:\Program Files (x86)" GOTO 64BITPatchesEnd
+IF NOT EXIST "C:\Program Files (x86)" GOTO 64BITPatchesEnd
 
 REM ArcGIS 10.4.1 for (Desktop, Engine, Server) Geocoding General Maintenance Patch 
 echo Installing ArcGIS 10.4.1 for (Desktop, Engine, Server) Geocoding General Maintenance Patch 64-bit
@@ -77,13 +79,13 @@ GOTO 32BITPatchesEnd
 
 :64BITPatchesEnd
 
-REM ArcGIS 10.4.1 for (Desktop, Engine, Server) Geocoding General Maintenance Patch 
-echo Installing ArcGIS 10.4.1 for (Desktop, Engine, Server) Geocoding General Maintenance Patch 
-C:\WINDOWS\system32\msiexec.exe /p "\\sul-gislab\geowares\Esri\ArcGIS_Desktop_10.4.1\Patches\ArcGIS-1041-DT-GGM-Patch.msp" /norestart /passive /gb
-
 echo Installing the 32-bit ArcHydro Extension...
 REM Installing the 32-bit ArcHydro Extension...
 C:\WINDOWS\system32\msiexec.exe /I "\\sul-gislab\geowares\Esri\ArcGIS_Desktop_10.4.1\ArcHydro\ArcHydroTools.msi" /norestart /passive /qb
+
+REM ArcGIS 10.4.1 for (Desktop, Engine, Server) Geocoding General Maintenance Patch 
+echo Installing ArcGIS 10.4.1 for (Desktop, Engine, Server) Geocoding General Maintenance Patch 
+C:\WINDOWS\system32\msiexec.exe /p "\\sul-gislab\geowares\Esri\ArcGIS_Desktop_10.4.1\Patches\ArcGIS-1041-DT-GGM-Patch.msp" /norestart /passive /gb
 
 :32BITPatchesEnd 
 
