@@ -27,3 +27,6 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\ESRI\Desktop10.4\ArcToolbox\Settings]
 "OverwriteOutput"=dword:00000001
 "RunInBackground"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ESRI\License10.4]
+"LICENSE_SERVER"="27004@sul-gislm.stanford.edu"
