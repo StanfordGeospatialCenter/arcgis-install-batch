@@ -117,6 +117,6 @@ rem Copy ESRI Data & Maps to the C:\EsriDataMaps104 Drive of the target machine
 xcopy "\\sul-gislab\geowares\Esri\Data_and_Maps_for_ArcGIS_10.5.1" "C:\EsriDataMaps105" /s /e /i
 
 REM Install Registry Entries for enabling all extensions and setting Relative Paths as the default
-rem REGEDIT.exe -S "\\sul-gislab\geowares\Esri\ArcGIS_Desktop_10.5.1\ArcGIS_10.5.1_RegistryEntries.reg" /norestart
+REGEDIT.exe -S "\\sul-gislab\geowares\Esri\ArcGIS_Desktop_10.5.1\ArcGIS_10.5.1_RegistryEntries.reg" /norestart
 
 ```
