@@ -1,4 +1,4 @@
-#The Rough Guide to Using Stace Maples’ ArcGIS Silent Installation Batch Files
+# The Rough Guide to Using Stace Maples’ ArcGIS Silent Installation Batch Files
 ____  
  
 **I suggest that you consult with your IT Staff to properly protect your University Licensing and Software resources from outside access, test extensively before distributing these files with your own network information and remember that you, of course, use these files at your own risk.**  
@@ -15,7 +15,7 @@ The batch files use parameters provided in the MS Installer for directing networ
 4. I can also email the batch files to people and they work just fine (as long as the URIs I use in them are fully qualified).  Obviously, if users are off site, they must VPN into the University network, but once in, they work as expected.
 5. Because we use the same installation batch files for individuals, labs, clusters and faculty/staff workstations, any user can sit down at any machine on campus and be assured that the configuration is the same as the one they are used to.
 
-##How to deploy Esri installation media for use with batch files.
+## How to deploy Esri installation media for use with batch files.
 You are going to need a litle bit of infrastructure. At a minimum, you will need:
 
 * An IP restricted ArcGIS License Manager for licensing concurrent use versions of ArcGIS for Desktop. If you are managing an Esri EDU Site License, you probably have one. If you don't, you should.
@@ -31,7 +31,7 @@ You'll also need the Esri Installation Media, which you can download from your [
      * Note that I use the **xcopy** command in the batch files to move the ArcTutor datasets to the destination machine. I've had some trouble getting the ArcTutor installers to execute properly. However, since the installer just creates a folder and places the data into it, you can just run it once, copy the data to your shared folder and deploy using the **xcopy** command in the script. For the record, you can also use this method to copy the Esri Data & Maps Datasets to target machine, though I put both of these copy functions into separate batch files from the ArcGIS Dekstop installers so users can opt out of the hour or so it takes to copy all of that data, if they want to.
  3. Once you have placed the installation medis on your chared drive, you are ready to customize the batchfiles I've created
 
-###The Batch File Code
+### The Batch File Code
 Below I'm going to go through the code for the batch file. THe code below might not represent the most trecent versions of the batch files, but my most recent versions should be available in the corresponding folders, above. 
 
 ```bat 
