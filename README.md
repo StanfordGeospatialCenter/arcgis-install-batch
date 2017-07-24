@@ -16,7 +16,7 @@ The batch files use parameters provided in the MS Installer for directing networ
 5. Because we use the same installation batch files for individuals, labs, clusters and faculty/staff workstations, any user can sit down at any machine on campus and be assured that the configuration is the same as the one they are used to.
 
 ## How to deploy Esri installation media for use with batch files.
-You are going to need a litle bit of infrastructure. At a minimum, you will need:
+You are going to need a little bit of infrastructure. At a minimum, you will need:
 
 * An IP restricted ArcGIS License Manager for licensing concurrent use versions of ArcGIS for Desktop. If you are managing an Esri EDU Site License, you probably have one. If you don't, you should.
 * A folder on a Windows Server, preferably one that is IP restricted, or uses your enterprise authentication to allow authorized users to access it.
@@ -29,10 +29,10 @@ You'll also need the Esri Installation Media, which you can download from your [
      * I use [7-ZIP](http://www.7-zip.org/) to extract the Esri *.exe files directly to the folders I want to run them from. I find that if I create the foldering structure described above, then right-click and drag the installers (for ArcGIS Desktop, as well as the extensions I want to deploy), I can select **Extract Here** from the context menu I get from 7-ZIP and everything gets placed into appropriate subfolders, like so:
 
      * Note that I use the **xcopy** command in the batch files to move the ArcTutor datasets to the destination machine. I've had some trouble getting the ArcTutor installers to execute properly. However, since the installer just creates a folder and places the data into it, you can just run it once, copy the data to your shared folder and deploy using the **xcopy** command in the script. For the record, you can also use this method to copy the Esri Data & Maps Datasets to target machine, though I put both of these copy functions into separate batch files from the ArcGIS Dekstop installers so users can opt out of the hour or so it takes to copy all of that data, if they want to.
- 3. Once you have placed the installation medis on your chared drive, you are ready to customize the batchfiles I've created
+ 3. Once you have placed the installation media on your shared drive, you are ready to customize the batchfiles I've created
 
 ### The Batch File Code
-Below I'm going to go through the code for the batch file. THe code below might not represent the most trecent versions of the batch files, but my most recent versions should be available in the corresponding folders, above. 
+Below I'm going to go through the code for the batch file. The code below might not represent the most recent versions of the batch files, but my most recent versions should be available in the corresponding folders, above. 
 
 ```bat 
 rem 		This batch file automates the process of installing ESRI's ArcGIS Desktop 10.3.1
