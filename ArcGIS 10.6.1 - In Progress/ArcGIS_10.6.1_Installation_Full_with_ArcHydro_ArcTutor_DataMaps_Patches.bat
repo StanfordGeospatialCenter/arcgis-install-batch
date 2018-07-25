@@ -10,12 +10,15 @@ echo off
 
 REM Installation of prerequisites
 
-"2017\vc_redist.x86.exe" /install /passive /norestart
+"\\sul-gislab\geowares\Esri\ArcGIS_Desktop_10.6.1\Desktop\SetupFiles\Support\VCREDIST\vc_redist.x86.exe" /install /passive /norestart
 
 REM Determine if on 64-bit operating system
 IF not EXIST "C:\Program Files (x86)" GOTO 32BIT
 
 echo Installing the SQL Server Native Client on 64-bit Windows first...
+
+"\\sul-gislab\geowares\Esri\ArcGIS_Desktop_10.6.1\DesktopBackgroundGP\SetupFiles\Support\VCREDIST\vc_redist.x64.exe" /install /passive /norestart
+
 C:\WINDOWS\system32\msiexec.exe /I "\\sul-gislab\geowares\Esri\ArcGIS_Desktop_10.6.1\SQLServer2012SP3NativeClient_64\sqlncli.msi" IACCEPTSQLNCLILICENSETERMS=YES /norestart /passive /qb
 
 REM echo Installing MSXML6 64-bit...
