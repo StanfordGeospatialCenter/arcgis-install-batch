@@ -60,11 +60,6 @@ C:\WINDOWS\system32\msiexec.exe /I "\\sul-gislab\geowares\Esri\ArcGIS_Desktop_10
 
 REM Patch Installation
 
-echo Installing the 64-bit ArcHydro Extension...
-REM Installing the 32-bit ArcHydro Extension...
-C:\WINDOWS\system32\msiexec.exe /I "\\sul-gislab\geowares\Esri\ArcGIS_Desktop_10.7.1\ArcHydro\ArcHydroTools_x64.msi" /norestart /passive /qb
-
-
 rem ArcGIS (Desktop, Engine, Server) Microsoft ( R ) Windows ( R ) June 2019 Security Update Compatibility Patch
 rem This patch resolves an issue with publishing services containing character marker symbology from ArcMap to ArcGIS Server, ArcGIS Enterprise or ArcGIS Online. This issue began with 
 rem Microsoft's June 2019 security updates. The patch should be applied to ArcGIS Desktop, ArcGIS Engine and ArcGIS Server machines.
