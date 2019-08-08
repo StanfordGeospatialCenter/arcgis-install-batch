@@ -6,6 +6,6 @@ reg add "HKEY_CURRENT_USER\Software\ESRI\Desktop10.6/\ArcMap\Recent Geodatabase 
 reg add "HKEY_CURRENT_USER\Software\ESRI\ArcGIS File Handler\Settings" /v "PackageLocation" /f /d "E:\users\%USERNAME%\ArcGIS\\"
 reg add "HKEY_CURRENT_USER\Software\ESRI\ArcGIS File Handler\Settings" /t REG_DWORD /v "PackageLocationOption" /f /d "1"
  
-reg add "HKEY_CURRENT_USER\Software\ESRI\Desktop10.6\ArcCatalog\DefaultHomeFolder" /f /v "Location" /d "E:\users\%USERNAME%\ArcGIS"
+reg add "HKEY_CURRENT_USER\Software\ESRI\Desktop10.7\ArcCatalog\DefaultHomeFolder" /f /v "Location" /d "E:\users\%USERNAME%\ArcGIS"
  
  

@@ -1,7 +1,7 @@
 REM 	This batch file automates the process of installing ESRI's ArcGIS Desktop 10.7.1
 REM 	The file was created by Stacey D. Maples, Geospatial Manager at the Stanford Geospatial Center, Stanford University
 REM		Question & Comments should be directed to stacemaples@stanford.edu
-REM     edited on 07/20/2017 for Stanford Faculty, Student & Staff Non-Managed Workstation and Personal Installations
+REM     edited on 08/7/2019 for Stanford Faculty, Student & Staff Non-Managed Workstation and Personal Installations
 
 
 set __COMPAT_LAYER=RunAsInvoker
@@ -59,8 +59,19 @@ REM Installing the 64-bit ArcHydro Extension...
 C:\WINDOWS\system32\msiexec.exe /I "\\sul-gislab\geowares\Esri\ArcGIS_Desktop_10.7.1\ArcHydro\ArcHydroTools_x64.msi" /norestart /passive /qb
 
 REM Patch Installation
+
+echo Installing the 64-bit ArcHydro Extension...
+REM Installing the 32-bit ArcHydro Extension...
+C:\WINDOWS\system32\msiexec.exe /I "\\sul-gislab\geowares\Esri\ArcGIS_Desktop_10.7.1\ArcHydro\ArcHydroTools_x64.msi" /norestart /passive /qb
+
+
+rem ArcGIS (Desktop, Engine, Server) Microsoft ( R ) Windows ( R ) June 2019 Security Update Compatibility Patch
+rem This patch resolves an issue with publishing services containing character marker symbology from ArcMap to ArcGIS Server, ArcGIS Enterprise or ArcGIS Online. This issue began with 
+rem Microsoft's June 2019 security updates. The patch should be applied to ArcGIS Desktop, ArcGIS Engine and ArcGIS Server machines.
 echo Installing 64-bit Patches
 
+echo Installing ArcGIS (Desktop, Engine, Server) Microsoft ( R ) Windows ( R ) June 2019 Security Update Compatibility Patch
+C:\WINDOWS\system32\msiexec.exe /p "\\sul-gislab\geowares\Esri\ArcGIS_Desktop_10.7.1\ArcGIS-1071-DT-MWJUN2019SUC-Patch.msp" /norestart /passive /gb
 
 GOTO 32BITPatchesEnd
 
@@ -71,18 +82,23 @@ REM Installing the 32-bit ArcHydro Extension...
 C:\WINDOWS\system32\msiexec.exe /I "\\sul-gislab\geowares\Esri\ArcGIS_Desktop_10.7.1\ArcHydro\ArcHydroTools.msi" /norestart /passive /qb
 
 
+rem ArcGIS (Desktop, Engine, Server) Microsoft ( R ) Windows ( R ) June 2019 Security Update Compatibility Patch
+rem This patch resolves an issue with publishing services containing character marker symbology from ArcMap to ArcGIS Server, ArcGIS Enterprise or ArcGIS Online. This issue began with 
+rem Microsoft's June 2019 security updates. The patch should be applied to ArcGIS Desktop, ArcGIS Engine and ArcGIS Server machines.
+echo Installing ArcGIS (Desktop, Engine, Server) Microsoft ( R ) Windows ( R ) June 2019 Security Update Compatibility Patch
+C:\WINDOWS\system32\msiexec.exe /p "\\sul-gislab\geowares\Esri\ArcGIS_Desktop_10.7.1\ArcGIS-1071-DT-MWJUN2019SUC-Patch.msp" /norestart /passive /gb
+
 :32BITPatchesEnd 
 
 REM install data & maps, ArcTutor and default settings registry entries
 
-rem echo Installing ArcGIS 10.6 Tutorial Materials that go with the tutorials in the Help System...
+echo Installing ArcGIS 10.7 Tutorial Materials that go with the tutorials in the Help System...
+rem Install ArcGIS 10.7 Tutorial Materials
+xcopy "\\sul-gislab\geowares\Esri\ArcGIS_Desktop_10.7.1\ArcTutor_10.7.1\ArcTutor" "C:\ArcTutor_10.7.1" /s /e /i
 
-rem Install ArcGIS 10.6 Tutorial Materials
-rem xcopy "\\sul-gislab\geowares\Esri\ArcGIS_Desktop_10.7.1\Tutorial\SetupFiles" "C:\ArcTutor_10.7.1" /s /e /i
+echo Installing the Esri Data & Maps Dataset... this is about 4GB of data, so it might take a while...
+rem Copy ESRI Data & Maps to C:\EsriDataMaps107 Drive of the target machine
+xcopy "\\sul-gislab\geowares\Esri\Data_and_Maps_for_ArcGIS2018_166503" "C:\EsriDataMaps107" /s /e /i
 
-rem echo Installing the Esri Data & Maps Dataset... this is about 4GB of data, so it might take a while...
-rem Copy ESRI Data & Maps to the C:\EsriDataMaps105 Drive of the target machine
-rem xcopy "\\sul-gislab\geowares\Esri\Data_and_Maps_for_ArcGIS2017_159470" "C:\EsriDataMaps106" /s /e /i
-
-REM REM Install Registry Entries for enabling all extensions and setting Relative Paths as the default
-REM REGEDIT.exe -S "\\sul-gislab\geowares\Esri\ArcGIS_Desktop_10.7.1\ArcGIS_10.7.1_RegistryEntries.reg" /norestart
+REM Install Registry Entries for enabling all extensions and setting Relative Paths as the default
+REGEDIT.exe -S "\\sul-gislab\geowares\Esri\ArcGIS_Desktop_10.7.1\ArcGIS_10.7.1_RegistryEntries.reg" /norestart
